@@ -8,11 +8,11 @@ function handleSubmit(event) {
     elements: { email, password }
   } = event.currentTarget;
 
-  if (email.value === "" || email.value === "") {
+  if (email.value === "") {
     return console.log("Please fill in all the fields!");
   }
     
- if (password.value === "" || password.value === "") {
+ if (password.value === "") {
     return console.log("Please fill in all the fields!");
   }
 

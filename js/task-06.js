@@ -1,6 +1,8 @@
 let input1 = document.querySelector('#validation-input');
 
-let inputLength = input1.dataset.length;
+let inputLength = parseInt(input1.dataset.length);
+//Завдання 6. Замість  +inputLength в 9 рядку, краще parseInput(input1.dataset.length) в 3 рядку
+// Я правильно понимаю что это опечатка ? parseInput и нужно было вставить  parseInt
 
 const input = document.querySelector('input');
 input1.addEventListener('change', e => {

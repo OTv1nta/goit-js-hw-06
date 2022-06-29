@@ -1,10 +1,10 @@
-const text1 = document.getElementById("text");
+const textPol = document.getElementById("text");
 
-const input1 = document.getElementById("font-size-control");
+const inputPol = document.getElementById("font-size-control");
 
-input1.addEventListener("input", (e) => {
-  const size = input1.value;
+inputPol.addEventListener("input", (e) => {
+  const size = inputPol.value;
   // console.log(size);
 
-  text1.style.fontSize = size + "px";
+  textPol.style.fontSize = size + "px";
 });

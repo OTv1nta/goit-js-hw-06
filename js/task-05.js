@@ -1,11 +1,12 @@
-let input1 = document.querySelector('#name-input');
-input1.addEventListener('input', onInputChange);
+const refs = {
+  nameInput: document.querySelector("#name-input"),
+  nameOutput: document.querySelector("#name-output"),
+};
 
-let output1 = document.querySelector('#name-output');
+refs.nameInput.addEventListener("input", onChangeName);
 
-function onInputChange(event) {
-  input1 = event.currentTarget.value;
-  console.log(input1);
-
-  input1 !== ' ' ? (output1.innerText = input1.trim()) : 'Anonymus';
+function onChangeName(event) {
+  return refs.nameInput.value === ""
+    ? (refs.nameOutput.textContent = "Anonymous")
+    : (refs.nameOutput.textContent = event.currentTarget.value);
 }
