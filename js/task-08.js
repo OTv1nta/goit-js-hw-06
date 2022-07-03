@@ -1,3 +1,10 @@
+/*Это убирает предупреждение */  
+const inputs = document.querySelectorAll('input');
+
+for (const input of inputs) {
+ input.setAttribute('autocomplete', 'on')
+}//Конец предупреждения Костыль.
+
 const form = document.querySelector(".login-form");
 
 form.addEventListener("submit", handleSubmit);
@@ -5,7 +12,7 @@ form.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
   const {
-    elements: { email, password }
+    elements: { email, password}
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
