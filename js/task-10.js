@@ -17,22 +17,12 @@ function onGetAmount() {
 }
 
 function onCreateBoxes(amount) {
-  if (refs.boxes.querySelector(".square")) {
-    onDestroyBoxes();
     for (let i = 0; i < amount; i += 1) {
       let size = 30 + i * 10;
       const markup = `<div class="square" style="background-color:${getRandomHexColor()}; width:${size}px; height:${size}px;"></div>`;
       refs.boxes.insertAdjacentHTML("beforeend", markup);
       document.querySelector("#controls input").value = 0;
     }
-  } else {
-    for (let i = 0; i < amount; i += 1) {
-      let size = 30 + i * 10;
-      const markup = `<div class="square" style="background-color:${getRandomHexColor()}; width:${size}px; height:${size}px;"></div>`;
-      refs.boxes.insertAdjacentHTML("beforeend", markup);
-      document.querySelector("#controls input").value = 0;
-    }
-  }
 }
 
 function onDestroyBoxes() {

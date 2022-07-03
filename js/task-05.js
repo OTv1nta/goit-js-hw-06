@@ -6,7 +6,5 @@ const refs = {
 refs.nameInput.addEventListener("input", onChangeName);
 
 function onChangeName(event) {
-  return refs.nameInput.value === ""
-    ? (refs.nameOutput.textContent = "Anonymous")
-    : (refs.nameOutput.textContent = event.currentTarget.value);
+  refs.nameOutput.textContent = refs.nameInput.value === "" ? "Anonymous" : event.currentTarget.value
 }
